@@ -18,13 +18,6 @@ float PxmatrixDisplay::get_setup_priority() const { return setup_priority::PROCE
 
 void PxmatrixDisplay::setup() {
   ESP_LOGCONFIG(TAG, "Starting setup...");
-  HUB75_I2S_CFG mxconfig(
-    PANEL_RES_X,   // module width
-    PANEL_RES_Y,   // module height
-    PANEL_CHAIN    // Chain length
-  );
-
-
 
   this->px_matrix_ = new PxMATRIX(width_, height_, pin_latch_->get_pin(), pin_oe_->get_pin(), pin_a_->get_pin(),
                                   pin_b_->get_pin(), pin_c_->get_pin(), pin_d_->get_pin(), pin_e_->get_pin());
