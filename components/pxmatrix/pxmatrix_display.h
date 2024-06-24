@@ -41,7 +41,7 @@ enum MuxPatterns {
   STRAIGHT = mux_patterns::STRAIGHT,
 };
 
-class PxmatrixDisplay : public PollingComponent, public display::DisplayBuffer {
+class PxmatrixDisplay : public display::DisplayBuffer {
  public:
   void display();
   float get_setup_priority() const override;
