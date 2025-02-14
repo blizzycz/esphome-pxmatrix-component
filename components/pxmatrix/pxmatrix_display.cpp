@@ -20,7 +20,7 @@ void PxmatrixDisplay::setup() {
   ESP_LOGCONFIG(TAG, "Starting setup...");
 
   this->px_matrix_ = new PxMATRIX(width_, height_, pin_latch_->get_pin(), pin_oe_->get_pin(), pin_a_->get_pin(),
-                                  pin_b_->get_pin(), pin_c_->get_pin(), pin_d_->get_pin(), pin_e_->get_pin());
+                                  pin_b_->get_pin(), pin_c_->get_pin());
   pxMatrix = this->px_matrix_;
 
   this->px_matrix_->begin(row_pattern_);
